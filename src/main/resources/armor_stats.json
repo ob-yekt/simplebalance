@@ -1,0 +1,9 @@
+{
+  "leather": { "helmet": 1, "chestplate": 2, "leggings": 2, "boots": 1 },
+  "chainmail": { "helmet": 1, "chestplate": 3, "leggings": 3, "boots": 1 },
+  "gold": { "helmet": 2, "chestplate": 3, "leggings": 3, "boots": 2 },
+  "iron": { "helmet": 3, "chestplate": 4, "leggings": 4, "boots": 3 },
+  "diamond": { "helmet": 4, "chestplate": 5, "leggings": 5, "boots": 4 },
+  "netherite": { "helmet": 4, "chestplate": 6, "leggings": 6, "boots": 4 },
+  "turtle": { "helmet": 3 }
+}

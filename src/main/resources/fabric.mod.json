@@ -1,0 +1,48 @@
+{
+	"schemaVersion": 1,
+	"id": "simplebalance",
+	"version": "0.9.0",
+	"name": "simplebalance",
+	"description": "Armor and tool rebalancing.",
+	"authors": [
+		"Ob'yekt"
+	],
+	"contact": {
+		"homepage": "https://steamcommunity.com/id/obyekt/",
+		"sources": "https://github.com/ob-yekt/simplebalance"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/simplebalance/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.github.ob_yekt.simplebalance.simplebalance"
+		],
+		"client": [
+			"com.github.ob_yekt.simplebalance.SimplebalanceClient"
+		]
+	},
+	"mixins": [
+		"simplebalance.mixins.json",
+		{
+			"config": "simplebalance.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	},
+	"custom": {
+		"mixin": {
+			"debug": {
+				"export": true
+			}
+		}
+	}
+}
