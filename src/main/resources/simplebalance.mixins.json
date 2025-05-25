@@ -1,16 +1,18 @@
 {
-	"required": true,
-	"package": "com.github.ob_yekt.simplebalance.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ArmorMaterialMixin",
-		"CraftingResultInventoryMixin",
-		"InventoryMixin",
-		"PlayerInventoryMixin",
-		"SimpleInventoryMixin",
-		"TradeManager"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "com.github.ob_yekt.simplebalance.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ArmorMaterialMixin",
+    "CraftingResultInventoryMixin",
+    "InventoryMixin",
+    "LocalDifficultyMixin",
+    "MobEntityMixin",
+    "PlayerInventoryMixin",
+    "SimpleInventoryMixin",
+    "VillagerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }
