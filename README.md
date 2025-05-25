@@ -11,6 +11,7 @@
     - **Normal:** 4.0
     - **Hard:** 6.75
 - Added a `/localdifficulty` command to check the current local difficulty value.
+- Fully server-side.
 
 ---
 
