@@ -3,7 +3,7 @@
 	"id": "simplebalance",
 	"version": "${version}",
 	"name": "simplebalance",
-	"description": "Difficulty, armor, and tool rebalancing.",
+	"description": "simple difficulty, armor, and tool rebalancing.",
 	"authors": [
 		"Ob'yekt"
 	],

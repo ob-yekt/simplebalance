@@ -31,7 +31,6 @@ public class ConfigLoader {
                 armorValues.putAll(GSON.fromJson(reader, CONFIG_TYPE));
             }
 
-
         } catch (Exception e) {
             System.err.println("Failed to load armor config: " + e);
         }

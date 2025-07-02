@@ -9,6 +9,7 @@
     "LocalDifficultyMixin",
     "MobEntityMixin",
     "PlayerInventoryMixin",
+    "ServerPlayerEntityMixin",
     "SimpleInventoryMixin",
     "VillagerEntityMixin"
   ],

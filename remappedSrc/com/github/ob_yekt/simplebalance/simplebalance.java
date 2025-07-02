@@ -21,14 +21,12 @@ public class simplebalance implements ModInitializer {
 	public void onInitialize() {
 		System.out.println("SimpleBalance mod initialized!");
 		VillagerTrades.registerCustomTrades();
-		IronmanMode.init(); // Initialize Ironman Mode
-
+		// Any other init tasks go here
 		CommandRegistrationCallback.EVENT.register(
 				(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess registryAccess, CommandManager.RegistrationEnvironment environment) -> {
-					// Register /localdifficulty command
 					dispatcher.register(
 							CommandManager.literal("localdifficulty")
-									.requires(source -> source.hasPermissionLevel(0))
+									.requires(source -> source.hasPermissionLevel(0))  // Now source is ServerCommandSource
 									.executes(context -> {
 										ServerCommandSource source = context.getSource();
 										ServerWorld world = source.getWorld();
@@ -44,23 +42,15 @@ public class simplebalance implements ModInitializer {
 										long timeOfDay = world.getTime();
 										long inhabitedTime = chunk.getInhabitedTime();
 
-										source.sendFeedback(() -> Text.literal("Local Difficulty Info:").formatted(Formatting.BOLD, Formatting.YELLOW), false);
-										source.sendFeedback(() -> Text.literal(" - Global Difficulty: ").append(Text.literal(String.valueOf(global)).formatted(Formatting.AQUA)), false);
-										source.sendFeedback(() -> Text.literal(" - Raw Local Difficulty: ").append(Text.literal(String.valueOf(raw)).formatted(Formatting.RED)), false);
-										source.sendFeedback(() -> Text.literal(" - Clamped Local Difficulty: ").append(Text.literal(String.valueOf(clamped)).formatted(Formatting.GREEN)), false);
-										source.sendFeedback(() -> Text.literal(" - Time of Day: ").append(Text.literal(String.valueOf(timeOfDay)).formatted(Formatting.GRAY)), false);
-										source.sendFeedback(() -> Text.literal(" - Inhabited Chunk Time: ").append(Text.literal(String.valueOf(inhabitedTime)).formatted(Formatting.GRAY)), false);
+										source.sendFeedback(() -> Text.literal("§eLocal Difficulty Info:").formatted(Formatting.BOLD), false);
+										source.sendFeedback(() -> Text.literal(" - Global Difficulty: §b" + global), false);
+										source.sendFeedback(() -> Text.literal(" - Raw Local Difficulty: §c" + raw), false);
+										source.sendFeedback(() -> Text.literal(" - Clamped Local Difficulty: §a" + clamped), false);
+										source.sendFeedback(() -> Text.literal(" - Time of Day: §7" + timeOfDay), false);
+										source.sendFeedback(() -> Text.literal(" - Inhabited Chunk Time: §7" + inhabitedTime), false);
 
 										return 1;
 									})
-					);
-
-					// Register /ironman enable command
-					dispatcher.register(
-							CommandManager.literal("ironman")
-									.requires(source -> source.hasPermissionLevel(0))
-									.then(CommandManager.literal("enable")
-											.executes(IronmanMode::enableIronman))
 					);
 				}
 		);

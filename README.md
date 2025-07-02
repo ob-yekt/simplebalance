@@ -4,6 +4,12 @@
 
 ## ⚙️ Features
 
+### 🏋️ Ironman Mode
+- Players can enable Ironman Mode by using the command `/ironman enable`
+    - **All items and levels are lost upon death in Ironman Mode**
+    - **Health is reduced by 50%.**
+    - **Ironman Mode players are marked on the leaderboard with a red skull.**
+
 ### 🧠 Difficulty Tweaks
 - Local Difficulty is always set to its maximum value based on the current difficulty setting:
     - **Peaceful:** 0.0
@@ -103,8 +109,8 @@
 ## 📚 Librarian
 
 ### Levels 1–4 (Novice to Expert)
-- ✅ Enchanted books require emeralds only, no books.
-- ✅ All enchantments are capped at **Max Level - 1**, except when max level is 1 
+- ✅ Enchanted books require emeralds only, no empty books.
+- ✅ All enchantments offered by Librarians are capped at **Max Level - 1**, except when max level is 1 
   - (e.g., Silk Touch is allowed, Protection max is 3, Unbreaking max is 2, Efficiency max is 4 etc.).
 - ❌ Removed all treasure enchantments except curses, including:
     - Mending
@@ -112,5 +118,4 @@
     - Soul Speed
     - Swift Sneak
     - Wind Burst
-
 ---
